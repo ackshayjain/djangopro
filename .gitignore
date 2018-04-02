@@ -60,8 +60,8 @@ coverage.xml
 local_settings.py
 base.py
 local.py
-settings/base.py
-settings/local.py
+ackshay/settings/base.py
+ackshay/settings/local.py
 
 # Flask stuff:
 instance/
