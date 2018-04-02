@@ -38,7 +38,7 @@ ALLOWED_HOSTS =  ['radiant-inlet-79223.herokuapp.com', '.yourdomain.com']
 # Application definition
 
 INSTALLED_APPS = (
-    'year',
+    'year',         
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
