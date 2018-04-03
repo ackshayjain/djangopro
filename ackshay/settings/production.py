@@ -61,7 +61,7 @@ ROOT_URLCONF = 'ackshay.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, "templates")],
+        'DIRS': [os.path.join(BASE_DIR, "Templates")],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -73,9 +73,6 @@ TEMPLATES = [
         },
     },
 ]
-TEMPLATE_DIRS = (
-    os.path.join(BASE_DIR, '../Templates'),
-)
 
 WSGI_APPLICATION = 'ackshay.wsgi.application'
 
