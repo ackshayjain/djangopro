@@ -71,6 +71,10 @@ TEMPLATES = [
     },
 ]
 
+TEMPLATE_DIRS = (
+    os.path.join(BASE_DIR, '../Templates'),
+)
+
 WSGI_APPLICATION = 'ackshay.wsgi.application'
 
 
