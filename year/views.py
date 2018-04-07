@@ -16,7 +16,7 @@ def index(request):
 def testform(request):
 	if request.method == 'POST':
         # create a form instance and popuslate it with data from the request:
-		form = AddForm(request.POST)
+		form = AddForm(request.POST,request.FILES)
         # check whether it's valid:
 		if form.is_valid():
 
@@ -32,11 +32,12 @@ def testform(request):
             # if(len(results) > 0):
             #     latLng = results[0]['geometry']['location']
             # {'lat': 25.2234975, 'lng': 73.7477857}
-            # pic = request.FILES.get('pic', '')
+			pic = request.FILES.get('pic', '')
+
             # comp_obj = Complaint(lat=latLng['lat'], lon=latLng['lng'], title=title, desc=desc, location=location,
             #                      pic=pic)
             # comp_obj.save()
-			test_obj = Test(title = title)
+			test_obj = Test(title = title,pic=pic)
 			test_obj.save()
 
 			return HttpResponseRedirect(reverse('home:index'))
