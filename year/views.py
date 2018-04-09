@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponseRedirect, HttpResponse
 from django.core.urlresolvers import reverse
+from django.contrib.auth.decorators import login_required
 import requests
 # Create your views here
 from .models import Test
@@ -12,7 +13,7 @@ def index(request):
 	return render(request, 'yearbook/index.html')
 
 
-
+@login_required(login_url='/login/')
 def testform(request):
 	if request.method == 'POST':
         # create a form instance and popuslate it with data from the request:
